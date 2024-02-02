@@ -64,19 +64,19 @@ vim.g.codedark_modern = false
 -- vim.g.starry_italic_comments = true
 -- vim.o.bg = "light"
 
-vim.g.solarized_italic_comments = true
-vim.g.solarized_italic_keywords = true
-vim.g.solarized_italic_functions = true
-vim.g.solarized_italic_variables = true
+-- vim.g.solarized_italic_comments = true
+-- vim.g.solarized_italic_keywords = true
+-- vim.g.solarized_italic_functions = true
+-- vim.g.solarized_italic_variables = true
 vim.g.solarized_contrast = true
 vim.g.solarized_borders = true
 
 
--- lvim.colorscheme = "solarized"
+lvim.colorscheme = "solarized"
 -- lvim.colorscheme = "monokai-pro"
 -- lvim.colorscheme = "codedark"
 -- lvim.colorscheme = "seoul256"
-lvim.colorscheme = "kanagawa"
+-- lvim.colorscheme = "kanagawa"
 -- lvim.colorscheme = "melange"
 -- lvim.colorscheme = "everforest"
 -- lvim.colorscheme = "visual_studio_code"
@@ -96,10 +96,9 @@ lvim.colorscheme = "kanagawa"
 
 -- lvim.colorscheme = "gruvbox-material"
 -- lvim.colorscheme = "gruvbox-baby"
-
 -- lvim.colorscheme = "oceanic"
 
-
+-- lvim.colorscheme = "dracula-soft"
 
 vim.lsp.diagnostic.show_line_diagnostics = true -- * Use |vim.diagnostic.open_float()| instead.
 vim.lsp.diagnostic.show_position_diagnostics = true
