@@ -57,20 +57,23 @@ lvim.plugins = {
   "marko-cerovac/material.nvim",
   "crispybaccoon/evergarden",
   "christianchiarulli/nvcode-color-schemes.vim",
-  -- "ellisonleao/gruvbox.nvim",
   "morhetz/gruvbox",
   "sainnhe/gruvbox-material",
   "luisiacc/gruvbox-baby",
   "catppuccin/nvim",
   "mhartington/oceanic-next",
-  "cpea2506/one_monokai.nvim"
+  "cpea2506/one_monokai.nvim",
+  "olexsmir/gopher.nvim",
+  "leoluz/nvim-dap-go",
+  "phha/zenburn.nvim",
+  "srcery-colors/srcery-vim"
+  -- "vimpostor/vim-tpipeline"
 }
 
 
 vim.g.codedark_italics = true
 vim.g.codedark_modern = false
 -- vim.g.codedark_transparent = true
-
 -- disable default jdtls ---
 
 -- vim.g.solarized_italic_comments = true
@@ -79,13 +82,11 @@ vim.g.codedark_modern = false
 -- vim.g.solarized_italic_variables = true
 -- vim.g.solarized_contrast = true
 vim.g.solarized_borders = true
-
-lvim.colorscheme = "solarized"
-
--- vim.g.gruvbox_contrast_dark = "medium"
--- vim.g.gruvbox_italicize_comments = true
--- vim.g.gruvbox_contrast_dark = "soft"
--- vim.g.gruvbox_invert_tabline = true
+-- lvim.colorscheme = "solarized"
+-- lvim.colorscheme = "zenburn"
+-- lvim.colorscheme = "srcery"
+-- lvim.colorscheme = "gruvbox"
+-- lvim.colorscheme = "everforest"
 
 vim.lsp.diagnostic.show_line_diagnostics = true -- * Use |vim.diagnostic.open_float()| instead.
 vim.lsp.diagnostic.show_position_diagnostics = true
@@ -134,3 +135,13 @@ require('indent_blankline').setup {
     show_start = false
   }
 }
+
+------------------------
+-- Dap
+------------------------
+local dap_ok, dapgo = pcall(require, "dap-go")
+if not dap_ok then
+  return
+end
+
+dapgo.setup()
