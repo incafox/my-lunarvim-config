@@ -67,7 +67,6 @@ lvim.plugins = {
   "leoluz/nvim-dap-go",
   "phha/zenburn.nvim",
   "srcery-colors/srcery-vim"
-  -- "vimpostor/vim-tpipeline"
 }
 
 
@@ -87,6 +86,8 @@ vim.g.solarized_borders = true
 -- lvim.colorscheme = "srcery"
 -- lvim.colorscheme = "gruvbox"
 -- lvim.colorscheme = "everforest"
+-- lvim.colorscheme = "lunar"
+lvim.colorscheme = "kanagawa"
 
 vim.lsp.diagnostic.show_line_diagnostics = true -- * Use |vim.diagnostic.open_float()| instead.
 vim.lsp.diagnostic.show_position_diagnostics = true
