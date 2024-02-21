@@ -1,5 +1,6 @@
 vim.lsp.set_log_level("trace")
 lvim.log.level = "info"
+lvim.format_on_save.enabled = true
 
 lvim.plugins = {
   "shaunsingh/solarized.nvim",
@@ -86,10 +87,7 @@ lvim.colorscheme = "kanagawa"
 vim.lsp.diagnostic.show_line_diagnostics = true -- * Use |vim.diagnostic.open_float()| instead.
 vim.lsp.diagnostic.show_position_diagnostics = true
 
-lvim.builtin.which_key.mappings["E"] = {
-  "<Cmd>echo Okay!<CR>"
-}
-
+-- float diagnostic messages
 function OpenDiagnosticIfNoFloat()
   for _, winid in pairs(vim.api.nvim_tabpage_list_wins(0)) do
     if vim.api.nvim_win_get_config(winid).zindex then
@@ -117,13 +115,12 @@ vim.api.nvim_create_autocmd({ "CursorHold" }, {
   group = "lsp_diagnostics_hold",
 })
 
+-- elegant margins
 vim.opt.signcolumn = "yes"
 vim.opt.statuscolumn = " %C%s%l"
 vim.opt.numberwidth = 7
 
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "jdtls" })
-
-lvim.format_on_save.enabled = true
 
 require('indent_blankline').setup {
   scope = {
