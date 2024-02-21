@@ -81,12 +81,6 @@ vim.g.codedark_modern = false
 -- vim.g.solarized_italic_variables = true
 -- vim.g.solarized_contrast = true
 vim.g.solarized_borders = true
--- lvim.colorscheme = "solarized"
--- lvim.colorscheme = "zenburn"
--- lvim.colorscheme = "srcery"
--- lvim.colorscheme = "gruvbox"
--- lvim.colorscheme = "everforest"
--- lvim.colorscheme = "lunar"
 lvim.colorscheme = "kanagawa"
 
 vim.lsp.diagnostic.show_line_diagnostics = true -- * Use |vim.diagnostic.open_float()| instead.
@@ -137,9 +131,6 @@ require('indent_blankline').setup {
   }
 }
 
-------------------------
--- Dap
-------------------------
 local dap_ok, dapgo = pcall(require, "dap-go")
 if not dap_ok then
   return
